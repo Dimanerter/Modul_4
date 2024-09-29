@@ -1,12 +1,12 @@
-
-
-fh = open('test.txt', 'w+')
-
-# symbols_written = fh.write('hello!')
+fh = open('test.txt', 'w')
 fh.write('hello!')
-fh.seek(0)
-# print(symbols_written)
-first_two_symbels = fh.read(2)
-print(first_two_symbels)
+fh.close()
+
+fh = open('test.txt', 'r')
+while True:
+    symbol = fh.read(1)
+    if len(symbol) == 0:
+        break
+    print(symbol)
 
 fh.close()
