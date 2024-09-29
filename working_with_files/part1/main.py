@@ -24,8 +24,10 @@ while True:
     if not line:
         break
     print(line)
+fh.seek(0)
+lines = fh.readlines()
+print(lines)
 
 
-    
 fh.close()
 
