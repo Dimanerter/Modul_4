@@ -25,9 +25,40 @@ while True:
         break
     print(line)
 fh.seek(0)
-lines = fh.readlines()
+lines = [el.strip() for el in fh.readlines()]
 print(lines)
+fh.close()
 
+#-----------------------------seek and tell-------------------------------
+
+fh = open('test.txt', 'w+')
+fh.write("hello!")
+position = fh.tell()
+print(position)
+
+fh.seek(1)
+position = fh.tell()
+print(position)
+
+fh.read(2)
+position = fh.tell()
+print(position)  # 3
 
 fh.close()
 
+#-----------------------------Менеджер контексту-------------------------------
+
+# fh = open('test.txt', 'w')
+# try:
+#     fh.write('Some data')
+# finally:
+#     fh.close()
+
+# with
+with open("test.txt", "w") as fh:
+    fh.write("first line\nsecond line\nthird line")
+
+with open("test.txt", "r") as fh:
+    lines = [el.strip() for el in fh.readlines()]
+
+print(lines)
