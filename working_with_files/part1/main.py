@@ -67,4 +67,10 @@ print(lines)
 
 with open('raw_date.bin', 'wb') as fh:
     fh.write(b'Hello world!')
-    
+
+
+s = b'Hello!'
+print(s[1])
+
+byte_str = 'some text'.encode()
+print(byte_str)
