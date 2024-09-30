@@ -62,3 +62,9 @@ with open("test.txt", "r") as fh:
     lines = [el.strip() for el in fh.readlines()]
 
 print(lines)
+
+#-----------------------------Робота з не текстовими файлами у Python-------------------------------
+
+with open('raw_date.bin', 'wb') as fh:
+    fh.write(b'Hello world!')
+    
