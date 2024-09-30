@@ -88,19 +88,43 @@ for num in [127, 255,156]:
 
 # Кодування рядків (ASCII, UTF-8, CP1251)
 
-print(ord('%'))
-print(chr(1000))
+# print(ord('%'))
+# print(chr(1000))
 
-s = "Привіт!"
+# s = "Привіт!"
 
-utf8 = s.encode()
-print(f"UTF-8: {utf8}")
+# utf8 = s.encode()
+# print(f"UTF-8: {utf8}")
 
-utf16 = s.encode('utf-16')
-print(f"UTF-16: {utf16}")
+# utf16 = s.encode('utf-16')
+# print(f"UTF-16: {utf16}")
 
-cp1251 = s.encode('cp1251')
-print(f"CP-1251: {cp1251}")
+# cp1251 = s.encode('cp1251')
+# print(f"CP-1251: {cp1251}")
 
-s_from_utf16 = utf16.decode("utf-16")
-print(s_from_utf16 == s)
+# s_from_utf16 = utf16.decode("utf-16")
+# print(s_from_utf16 == s)
+
+
+# print(b'Hello world!'.decode('utf-16'))
+
+with open('test.txt','r', encoding = 'utf-8') as file:
+    content = file.read()
+    print(content)
+
+# Масив байтів
+
+byte_array = bytearray(b'Kill Bill')
+byte_array[0] = ord('B')
+byte_array[5] = ord('K')
+print(byte_array)
+
+
+byte_array = bytearray(b"Hello")
+byte_array.append(ord("!"))
+print(byte_array)
+
+byte_array = bytearray(b"Hello world!")
+string = byte_array.decode("utf-8")
+print(string)
+
