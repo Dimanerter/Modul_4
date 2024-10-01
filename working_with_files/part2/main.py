@@ -40,10 +40,24 @@ print(original_path)
 
 
 # -------------------------------Читання та запис файлів--------------------
+#Запис
 file_path = Path("example.txt")
-
 file_path.write_text("Привіт світ!", encoding = "utf-8")
 
+#Читання
+text = file_path.read_text(encoding='utf-8')
+print(text)
+
+# запис бінарних даних у файл
+file_path = Path('example.bin')
+
+date = b"Python is great!"
+file_path.write_bytes(date)
+
+# читання бінарних даних з файлу
+
+binary_date = file_path.read_bytes()
+print(binary_date)
 
 
 
