@@ -1,6 +1,5 @@
-# # Імпорт пакетів та модулів
-# import mymodul
-from mymodule import say_hello as greeting
+import sys
+import os
 
-# print(greeting("World"))
-greeting("World")
+print(sys.builtin_module_names)
+print(sys.path)
