@@ -1,4 +1,6 @@
-# Імпорт пакетів та модулів
-import mymodul
+# # Імпорт пакетів та модулів
+# import mymodul
+from mymodule import say_hello as greeting
 
-print(mymodul.say_hello("Dmitriy"))
+# print(greeting("World"))
+greeting("World")
