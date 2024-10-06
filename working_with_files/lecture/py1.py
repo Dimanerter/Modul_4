@@ -1,7 +1,13 @@
+def get_name():
+    name = input('Write your name ')
+    return name
 
+def greet(name):
+    print(f"Hello {name}")
 
 def main():
-    print(1)
+    name = get_name()
+    greet(name)
 
 if __name__ == "__main__":
     main()

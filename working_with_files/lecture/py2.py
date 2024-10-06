@@ -1,5 +1,12 @@
+from py1 import get_name
+
+
+def goodbuy(name):
+    print(f"Goodbuy {name}")
+
 def main():
-    print(2)
+    name = get_name()
+    goodbuy(name)
 
 if __name__ == "__main__":
     main()
